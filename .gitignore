@@ -216,3 +216,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# 数据文件（不上传）
+data/
+*.csv
+*.xlsx
+*.parquet
+
+# Jupyter缓存
+.ipynb_checkpoints/
