@@ -223,5 +223,11 @@ data/
 *.xlsx
 *.parquet
 
-# Jupyter缓存
+# Python缓存
+__pycache__/
+*.pyc
 .ipynb_checkpoints/
+
+# 环境
+.env
+venv/
