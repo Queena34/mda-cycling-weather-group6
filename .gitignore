@@ -232,17 +232,3 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 
-# 数据文件（不上传）
-data/
-*.csv
-*.xlsx
-*.parquet
-
-# Python缓存
-__pycache__/
-*.pyc
-.ipynb_checkpoints/
-
-# 环境
-.env
-venv/
