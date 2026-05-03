@@ -25,9 +25,8 @@ This project analyses how weather conditions affect cycling demand across Flemis
 │   ├── 08_gam_model.ipynb
 │   ├── 09_sensitivity_analysis.ipynb
 │   └── 10_leuven_totem_case.ipynb
-├── outputs/
-│   └── figures/
-└── report/
+└── outputs/
+    └── figures/
 ```
 
 ## Data Setup
