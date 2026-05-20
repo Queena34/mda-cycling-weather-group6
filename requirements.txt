@@ -1,8 +1,29 @@
-matplotlib==3.10.8
-numpy==2.4.2
-pandas==3.0.1
-scikit-learn==1.8.0
+# Core data processing
+numpy>=1.26
+pandas>=2.0
+polars>=0.20
+
+# Visualisation
+matplotlib>=3.8
+seaborn>=0.13
+
+# Machine learning & statistics
+scikit-learn>=1.4
+scipy>=1.12
+pygam>=0.9
+
+# Gradient boosting & interpretability
+lightgbm>=4.0
+xgboost>=2.0
+shap>=0.45
+
+# Weather API
 openmeteo-requests>=0.3.0
 retry-requests>=2.0.0
 requests-cache>=1.2.0
+
+# Calendar & holidays
 holidays>=0.46
+
+# Interactive map
+folium>=0.17
