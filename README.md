@@ -4,7 +4,7 @@
 Chenyu Zhang · Mufan Cheng · Qiaoqiao Zhang · Yuxuan Zhu  
 
 ## Overview
-This project analyses how weather conditions affect cycling demand across Flemish bicycle counting stations managed by AWV (Agentschap Wegen en Verkeer). Using a station-day panel dataset for 2023–2025, we examine the nonlinear effects of temperature, precipitation, wind speed, humidity, and sunshine duration on bicycle counts, and quantify weather sensitivity and resilience across 87 counting sites. Findings aim to support evidence-based prioritisation of cycling infrastructure investments.
+This project analyses how weather conditions affect cycling demand across Flemish bicycle counting stations managed by AWV (Agentschap Wegen en Verkeer). Using a station-day panel dataset for 2023–2025, we examine the nonlinear effects of temperature, precipitation, wind speed, humidity, and sunshine duration on bicycle counts, and quantify weather sensitivity and resilience across 133 counting sites. Findings aim to support evidence-based prioritisation of cycling infrastructure investments.
 
 ## Research Questions
 1. How do hourly weather conditions associate with bicycle counts, and are these effects nonlinear or lagged?
@@ -19,10 +19,14 @@ This project analyses how weather conditions affect cycling demand across Flemis
 │   ├── 02_data_cleaning.ipynb
 │   ├── 03_panel_construction.ipynb
 │   ├── 04_weather_data.ipynb
-│   ├── 05_merge_and_calendar.ipynb
+│   ├── 05_merge_calendar_and_features.ipynb
 │   ├── 06_site_classification.ipynb
 │   ├── 07_eda.ipynb
 │   ├── 08_gam_model.ipynb
+│   ├── 08_gam_model_interactions.ipynb
+│   ├── 08b_lgbm_model.ipynb
+│   ├── 08b_lgbm_regression_model.ipynb
+│   ├── 08c_xgboost_model.ipynb
 │   ├── 09_sensitivity_analysis.ipynb
 │   └── 10_leuven_totem_case.ipynb
 └── outputs/
@@ -35,7 +39,7 @@ Raw data is not tracked in this repository due to file size. The complete `data/
 
 **[Download data folder](https://drive.google.com/drive/folders/1CkxJ5tIkG1gALc8s6j5HPPHI209qDyg6)**
 
-Download and place the contents under `data/` in the project root, then run notebooks 01–10 in order to reproduce all results.
+Download and place the contents under `data/` in the project root, then run notebooks 01–10 in order to reproduce all results. Notebooks 08b and 08c can be run independently alongside 08.
 
 Alternatively, you can fetch the data from source manually:
 
@@ -51,7 +55,7 @@ pip install -r requirements.txt
 
 ## Methods
 
-- **Models**: Generalized Additive Models (GAMs) with site fixed effects
+- **Models**: Generalized Additive Models (GAMs) with site fixed effects, LightGBM, XGBoost
 - **Controls**: weekends, Belgian public holidays, Flemish school holidays, KU Leuven academic calendar
 - **Output**: weather-normalized cycling index and station-level weather sensitivity metrics
 
@@ -61,5 +65,8 @@ pip install -r requirements.txt
 |---|---|
 | `pandas`, `numpy` | Data ingestion, cleaning, panel construction |
 | `geopandas`, `shapely` | Spatial operations, nearest-station matching |
-| `pyGAM`, `statsmodels` | Statistical modelling |
-| `matplotlib` | Visualization |
+| `pyGAM`, `statsmodels` | GAM statistical modelling |
+| `lightgbm`, `xgboost` | Gradient boosting models |
+| `shap` | Feature importance and model interpretation |
+| `matplotlib`, `seaborn` | Visualization |
+| `scipy` | Statistical testing (Kruskal-Wallis, Mann-Whitney) |
