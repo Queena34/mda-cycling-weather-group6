@@ -7,9 +7,9 @@ Chenyu Zhang · Mufan Cheng · Qiaoqiao Zhang · Yuxuan Zhu
 This project analyses how weather conditions affect cycling demand across Flemish bicycle counting stations managed by AWV (Agentschap Wegen en Verkeer). Using a station-day panel dataset for 2023–2025, we examine the nonlinear effects of temperature, precipitation, wind speed, humidity, and sunshine duration on bicycle counts, and quantify weather sensitivity and resilience across 133 counting sites. Findings aim to support evidence-based prioritisation of cycling infrastructure investments.
 
 ## Research Questions
-1. How do hourly weather conditions associate with bicycle counts, and are these effects nonlinear or lagged?
-2. Which counting stations are most weather-sensitive versus resilient, after controlling for holidays and temporal patterns?
-3. Which commuting corridors should be prioritised for infrastructure improvements (shelter, drainage, winter maintenance)?
+1. How are daily bicycle counts associated with weather effects?
+2. After accounting for regular temporal patterns and calendar events, how does weather sensitivity vary across counting stations and station types?
+3. Based on these differences, which stations should be prioritised for weather-resilient cycling infrastructure improvement?
 
 ## Repository Structure
 
